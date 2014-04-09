@@ -1,0 +1,14 @@
+Source: winexe
+Section: winexe
+Priority: optional
+Maintainer: Trois Six <trois.six@free.fr>
+Build-Depends: debhelper (>= 8.0.0), gcc-mingw-w64, pkg-config, libtalloc-dev, samba-dev, libtevent-dev
+Standards-Version: 3.9.4
+Homepage: http://sourceforge.net/p/winexe/wiki/Home/
+
+Package: winexe
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: winexe
+ Winexe remotely executes commands on Windows®
+ NT/2000/XP/2003 systems

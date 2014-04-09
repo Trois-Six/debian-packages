@@ -1,0 +1,526 @@
+# project  configured on Wed Apr  9 16:22:05 2014 by
+# waf 1.7.5 (abi 98, python 20706f0 on linux2)
+# using ./waf configure --prefix=/usr
+#
+----------------------------------------
+Setting top to
+/root/src/winexe-winexe-waf/winexe-1.00.1
+----------------------------------------
+Setting out to
+/root/src/winexe-winexe-waf/winexe-1.00.1/build
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='CC' -> '/usr/bin/gcc'
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='AR' -> '/usr/bin/ar'
+/usr/bin/gcc
+----------------------------------------
+Checking for program pkg-config
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PKGCONFIG' -> '/usr/bin/pkg-config'
+----------------------------------------
+Checking for 'dcerpc'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'dcerpc']
+out: -DHAVE_IMMEDIATE_STRUCTURES=1 -D_GNU_SOURCE=1 -I/usr/include/samba-4.0  -ldcerpc -ldcerpc-binding -lndr -lsamba-util -ltevent -ltalloc  
+
+yes
+----------------------------------------
+Checking for 'talloc'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'talloc']
+out:  -ltalloc  
+
+yes
+----------------------------------------
+SAMBA_INCS set to
+/usr/include/samba-4.0
+----------------------------------------
+SAMBA_LIBS set to
+/usr/lib/x86_64-linux-gnu/samba
+----------------------------------------
+Checking for samba_util.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <samba_util.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_4a340de47e716b21ba89d34dda4d8b7c/test.c -> build/.conf_check_4a340de47e716b21ba89d34dda4d8b7c/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_4a340de47e716b21ba89d34dda4d8b7c/testbuild/test.c.1.o -> build/.conf_check_4a340de47e716b21ba89d34dda4d8b7c/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_4a340de47e716b21ba89d34dda4d8b7c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for core/error.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <core/error.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_368146d30ad1c8b80f723ba5a8304599/test.c -> build/.conf_check_368146d30ad1c8b80f723ba5a8304599/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_368146d30ad1c8b80f723ba5a8304599/testbuild/test.c.1.o -> build/.conf_check_368146d30ad1c8b80f723ba5a8304599/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_368146d30ad1c8b80f723ba5a8304599/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for credentials.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <credentials.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_0fcb3758ad14389808a71b28bd03cb35/test.c -> build/.conf_check_0fcb3758ad14389808a71b28bd03cb35/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_0fcb3758ad14389808a71b28bd03cb35/testbuild/test.c.1.o -> build/.conf_check_0fcb3758ad14389808a71b28bd03cb35/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_0fcb3758ad14389808a71b28bd03cb35/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for dcerpc.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <dcerpc.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_f2e57769338152a3f53ecf8259a66f7f/test.c -> build/.conf_check_f2e57769338152a3f53ecf8259a66f7f/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_f2e57769338152a3f53ecf8259a66f7f/testbuild/test.c.1.o -> build/.conf_check_f2e57769338152a3f53ecf8259a66f7f/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_f2e57769338152a3f53ecf8259a66f7f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for gen_ndr/ndr_svcctl_c.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <gen_ndr/ndr_svcctl_c.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_49214600b08615b0c0a4f62b0c919423/test.c -> build/.conf_check_49214600b08615b0c0a4f62b0c919423/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_49214600b08615b0c0a4f62b0c919423/testbuild/test.c.1.o -> build/.conf_check_49214600b08615b0c0a4f62b0c919423/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_49214600b08615b0c0a4f62b0c919423/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for popt.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <popt.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_f3c5cf001d7df2bf83cf5b010a73eb6b/test.c -> build/.conf_check_f3c5cf001d7df2bf83cf5b010a73eb6b/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_f3c5cf001d7df2bf83cf5b010a73eb6b/testbuild/test.c.1.o -> build/.conf_check_f3c5cf001d7df2bf83cf5b010a73eb6b/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_f3c5cf001d7df2bf83cf5b010a73eb6b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for smb_cli.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 1
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <smb_cli.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_aaf7b04aa898435547b2f4f1b9239674/test.c -> build/.conf_check_aaf7b04aa898435547b2f4f1b9239674/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_aaf7b04aa898435547b2f4f1b9239674/testbuild/test.c.1.o -> build/.conf_check_aaf7b04aa898435547b2f4f1b9239674/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_aaf7b04aa898435547b2f4f1b9239674/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for smb_cliraw.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 1
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <smb_cliraw.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_cde361eaab971b015c9db950ef019729/test.c -> build/.conf_check_cde361eaab971b015c9db950ef019729/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_cde361eaab971b015c9db950ef019729/testbuild/test.c.1.o -> build/.conf_check_cde361eaab971b015c9db950ef019729/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_cde361eaab971b015c9db950ef019729/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for smb_composite.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 1
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <smb_composite.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_faddb099af3d98d5ffd72bd0aedd4bec/test.c -> build/.conf_check_faddb099af3d98d5ffd72bd0aedd4bec/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_faddb099af3d98d5ffd72bd0aedd4bec/testbuild/test.c.1.o -> build/.conf_check_faddb099af3d98d5ffd72bd0aedd4bec/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_faddb099af3d98d5ffd72bd0aedd4bec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for tevent.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 0
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <tevent.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_f74adaca4653a0653475f1f78eb4896f/test.c -> build/.conf_check_f74adaca4653a0653475f1f78eb4896f/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_f74adaca4653a0653475f1f78eb4896f/testbuild/test.c.1.o -> build/.conf_check_f74adaca4653a0653475f1f78eb4896f/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_f74adaca4653a0653475f1f78eb4896f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for util/debug.h
+==>
+
+                #include <stdint.h>
+                #include <stdbool.h>
+                #if 1
+                #include <samba_util.h>
+                #include <core/error.h>
+                #endif
+                #include <util/debug.h>
+                int main() {return 0;}
+                
+<==
+[1/2] [32mc: build/.conf_check_2954be8767020848a867bfd5d1823002/test.c -> build/.conf_check_2954be8767020848a867bfd5d1823002/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-I/usr/include/samba-4.0', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_2954be8767020848a867bfd5d1823002/testbuild/test.c.1.o -> build/.conf_check_2954be8767020848a867bfd5d1823002/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_2954be8767020848a867bfd5d1823002/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+----------------------------------------
+Checking for library cli-ldap
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/test.c -> build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/testbuild/test.c.1.o -> build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lcli-ldap']
+err: /usr/bin/ld.bfd.real: ne peut trouver -lcli-ldap
+collect2: error: ld returned 1 exit status
+
+from /root/src/winexe-winexe-waf/winexe-1.00.1: Test does not build: Traceback (most recent call last):
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Tools/c_config.py", line 451, in run_c_code
+    bld.compile()
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Build.py", line 198, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139823996209360: cprogram test.c.1.o -> testprog}
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_8c42439781f5a6c56baf7f8b9c378202/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lcli-ldap']
+
+not found
+from /root/src/winexe-winexe-waf/winexe-1.00.1: The configuration failed
+----------------------------------------
+Checking for library :libcli-ldap.so.0
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_1d28d6097115ab1ef7bfb18c759f143c/test.c -> build/.conf_check_1d28d6097115ab1ef7bfb18c759f143c/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_1d28d6097115ab1ef7bfb18c759f143c/testbuild/test.c.1.o -> build/.conf_check_1d28d6097115ab1ef7bfb18c759f143c/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_1d28d6097115ab1ef7bfb18c759f143c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-l:libcli-ldap.so.0']
+yes
+----------------------------------------
+Checking for library dcerpc
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_cdd6e6e67f9610ca745775758f8ed8ff/test.c -> build/.conf_check_cdd6e6e67f9610ca745775758f8ed8ff/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_cdd6e6e67f9610ca745775758f8ed8ff/testbuild/test.c.1.o -> build/.conf_check_cdd6e6e67f9610ca745775758f8ed8ff/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_cdd6e6e67f9610ca745775758f8ed8ff/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-ldcerpc']
+yes
+----------------------------------------
+Checking for library dcerpc-samba
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/test.c -> build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/testbuild/test.c.1.o -> build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-ldcerpc-samba']
+err: /usr/bin/ld.bfd.real: ne peut trouver -ldcerpc-samba
+collect2: error: ld returned 1 exit status
+
+from /root/src/winexe-winexe-waf/winexe-1.00.1: Test does not build: Traceback (most recent call last):
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Tools/c_config.py", line 451, in run_c_code
+    bld.compile()
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Build.py", line 198, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139823995229456: cprogram test.c.1.o -> testprog}
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_ed0b7430c249f5e0a1a373a973abe71b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-ldcerpc-samba']
+
+not found
+from /root/src/winexe-winexe-waf/winexe-1.00.1: The configuration failed
+------------------------------------------
+Checking for library :libdcerpc-samba.so.0
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_fa774f9a1e4cec82e03aa04a7ada0dfc/test.c -> build/.conf_check_fa774f9a1e4cec82e03aa04a7ada0dfc/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_fa774f9a1e4cec82e03aa04a7ada0dfc/testbuild/test.c.1.o -> build/.conf_check_fa774f9a1e4cec82e03aa04a7ada0dfc/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_fa774f9a1e4cec82e03aa04a7ada0dfc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-l:libdcerpc-samba.so.0']
+yes
+------------------------------------------
+Checking for library errors
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_51523c27768ed08e69aa16a52be941ae/test.c -> build/.conf_check_51523c27768ed08e69aa16a52be941ae/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_51523c27768ed08e69aa16a52be941ae/testbuild/test.c.1.o -> build/.conf_check_51523c27768ed08e69aa16a52be941ae/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_51523c27768ed08e69aa16a52be941ae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lerrors']
+err: /usr/bin/ld.bfd.real: ne peut trouver -lerrors
+collect2: error: ld returned 1 exit status
+
+from /root/src/winexe-winexe-waf/winexe-1.00.1: Test does not build: Traceback (most recent call last):
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Tools/c_config.py", line 451, in run_c_code
+    bld.compile()
+  File "/root/src/winexe-winexe-waf/winexe-1.00.1/waflib/Build.py", line 198, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 139823995230224: cprogram test.c.1.o -> testprog}
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_51523c27768ed08e69aa16a52be941ae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lerrors']
+
+not found
+from /root/src/winexe-winexe-waf/winexe-1.00.1: The configuration failed
+------------------------------------------
+Checking for library :liberrors.so.0
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_b9d801172d026b1d525d0d68cbe4143b/test.c -> build/.conf_check_b9d801172d026b1d525d0d68cbe4143b/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_b9d801172d026b1d525d0d68cbe4143b/testbuild/test.c.1.o -> build/.conf_check_b9d801172d026b1d525d0d68cbe4143b/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_b9d801172d026b1d525d0d68cbe4143b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-l:liberrors.so.0']
+yes
+------------------------------------------
+Checking for library popt
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_09a52fe2ff6e4016e3b82090e64a9e7c/test.c -> build/.conf_check_09a52fe2ff6e4016e3b82090e64a9e7c/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_09a52fe2ff6e4016e3b82090e64a9e7c/testbuild/test.c.1.o -> build/.conf_check_09a52fe2ff6e4016e3b82090e64a9e7c/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_09a52fe2ff6e4016e3b82090e64a9e7c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lpopt']
+yes
+------------------------------------------
+Checking for library talloc
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_43f08de06e9c8cbc4f51111097afa99b/test.c -> build/.conf_check_43f08de06e9c8cbc4f51111097afa99b/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_43f08de06e9c8cbc4f51111097afa99b/testbuild/test.c.1.o -> build/.conf_check_43f08de06e9c8cbc4f51111097afa99b/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_43f08de06e9c8cbc4f51111097afa99b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-ltalloc']
+yes
+------------------------------------------
+Checking for library ndr-standard
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_e87fa4e23d9c0f1573153dba41a778c5/test.c -> build/.conf_check_e87fa4e23d9c0f1573153dba41a778c5/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_e87fa4e23d9c0f1573153dba41a778c5/testbuild/test.c.1.o -> build/.conf_check_e87fa4e23d9c0f1573153dba41a778c5/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_e87fa4e23d9c0f1573153dba41a778c5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lndr-standard']
+yes
+------------------------------------------
+Checking for library samba-hostconfig
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_f1f939d9e81eeefe33fa3888e247f7f4/test.c -> build/.conf_check_f1f939d9e81eeefe33fa3888e247f7f4/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_f1f939d9e81eeefe33fa3888e247f7f4/testbuild/test.c.1.o -> build/.conf_check_f1f939d9e81eeefe33fa3888e247f7f4/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_f1f939d9e81eeefe33fa3888e247f7f4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lsamba-hostconfig']
+yes
+------------------------------------------
+Checking for library samba-credentials
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_1f2c237cecf5e67e0e663c57fc90460e/test.c -> build/.conf_check_1f2c237cecf5e67e0e663c57fc90460e/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_1f2c237cecf5e67e0e663c57fc90460e/testbuild/test.c.1.o -> build/.conf_check_1f2c237cecf5e67e0e663c57fc90460e/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_1f2c237cecf5e67e0e663c57fc90460e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lsamba-credentials']
+yes
+------------------------------------------
+Checking for library smbclient-raw
+==>
+
+int main(int argc, char **argv) {
+	return 0;
+}
+
+<==
+[1/2] [32mc: build/.conf_check_d55a7de64104ddc506dd2a799f10b32d/test.c -> build/.conf_check_d55a7de64104ddc506dd2a799f10b32d/testbuild/test.c.1.o
+[0m
+['/usr/bin/gcc', '-DHAVE_DCERPC=1', '-DHAVE_TALLOC=1', '../test.c', '-c', '-o', 'test.c.1.o']
+[2/2] [33mcprogram: build/.conf_check_d55a7de64104ddc506dd2a799f10b32d/testbuild/test.c.1.o -> build/.conf_check_d55a7de64104ddc506dd2a799f10b32d/testbuild/testprog
+[0m
+['/usr/bin/gcc', 'test.c.1.o', '-o', '/root/src/winexe-winexe-waf/winexe-1.00.1/build/.conf_check_d55a7de64104ddc506dd2a799f10b32d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu/samba', '-lsmbclient-raw']
+yes
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Checking for program i386-mingw32-gcc,i386-mingw32msvc-gcc,i386-w64-mingw32-gcc,i586-mingw32-gcc,i586-mingw32msvc-gcc,i586-w64-mingw32-gcc,i686-mingw32-gcc,i686-mingw32msvc-gcc,i686-w64-mingw32-gcc
+/usr/bin/i686-w64-mingw32-gcc
+find program=['i386-mingw32-gcc', 'i386-mingw32msvc-gcc', 'i386-w64-mingw32-gcc', 'i586-mingw32-gcc', 'i586-mingw32msvc-gcc', 'i586-w64-mingw32-gcc', 'i686-mingw32-gcc', 'i686-mingw32msvc-gcc', 'i686-w64-mingw32-gcc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='CC_WIN32' -> '/usr/bin/i686-w64-mingw32-gcc'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Checking for program x86_64-mingw32-gcc,x86_64-mingw32msvc-gcc,x86_64-w64-mingw32-gcc,amd64-mingw32-gcc,amd64-mingw32msvc-gcc,amd64-w64-mingw32-gcc
+/usr/bin/x86_64-w64-mingw32-gcc
+find program=['x86_64-mingw32-gcc', 'x86_64-mingw32msvc-gcc', 'x86_64-w64-mingw32-gcc', 'amd64-mingw32-gcc', 'amd64-mingw32msvc-gcc', 'amd64-w64-mingw32-gcc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='CC_WIN64' -> '/usr/bin/x86_64-w64-mingw32-gcc'
